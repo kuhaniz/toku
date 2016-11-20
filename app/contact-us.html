@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TOKU</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body class="contact-us">
+    <div class="mobile-menu-container">
+      <div class="mobile-list">
+        <a href="#">Call Now</a>
+        <a href="call-rates.html">Rates</a>
+      </div>
+    </div>
+  <div class="container">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li><a href="#">Call now</a></li>
+      <li><a href="call-rates.html">Rates</a></li>
+    </ul>
+    <a href="#" class="mobile-menu"></a>
+    <a href="index.html">
+      <h3 class="text-muted logo"><img class="yellow" src="images/logo-yellow.png" /><img class="white"src="images/logo.png" /></h3>
+    </a>
+  </div>
+  <div class="content contact">
+    <div class="title">
+      <h1>Contact us</h1>
+      <h4>Toku HQ is located in Singapore</h4>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h5>Address</h5>
+        <p>Toku, 10 Ubi Crescent, Lobby B #02-21, Ubi Techpark Singapore 408564</p>
+      </div>
+    </div>
+    <div class="row form">
+      <div class="col-sm-4">
+        <select class="form-control">
+          <option disabled selected>select category</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <input type="text" class="form-control" placeholder="Name">
+      </div>
+      <div class="col-xs-6 col-sm-4">
+        <input type="text" class="form-control" placeholder="email address">
+      </div>
+    </div>
+    <div class="row form">
+      <div class="col-sm-12">
+        <input type="text" class="form-control" placeholder="subject">
+      </div>
+    </div>
+    <div class="row form">
+      <div class="col-sm-12">
+        <textarea class="form-control" rows="3" placeholder="message"></textarea>
+      </div>
+    </div>
+    <div class="row form">
+      <button class="btn btn-default" type="submit">SEND</button>
+    </div>
+  </div>
+</div>
+<div id="map"></div>
+
+<div class="footer">
+  <div class="footer-content">
+    <ul>
+      <li><a href="#">Careers</a></li>
+      <li><a class="active" href="contact-us.html">Contact Us</a></li>
+      <li><a href="#">Subscribe</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+    </ul>
+    <div class="social">
+      <a class="social-fb" href="#"></a>
+      <a class="social-twitter" href="#"></a>
+    </div>
+  </div>
+</div>
+
+<script>
+      function initMap() {
+        var uluru = {lat: 1.325542, lng: 103.895052};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+          styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+        });
+        var iconimg = "images/map-logo.png";
+        var marker = new google.maps.Marker({
+          position: uluru,
+          icon: iconimg,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP37eXlI8tYkDPHxpIFDkbI6Ltc4mWGI8&callback=initMap">
+    </script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='https://www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/modernizr/modernizr.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
