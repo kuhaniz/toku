@@ -61,6 +61,11 @@ body {
   z-index: 12;
   left: 0;
 
+
+  .home & {
+
+  }
+
   .logo {
 
     .white { display: none; }
@@ -148,6 +153,7 @@ body {
   bottom: 0;
   text-align: left;
   width: 100%;
+  z-index: 20;
 
   @media screen and (min-width: 768px) {
     text-align: center;
@@ -160,6 +166,10 @@ body {
     position: relative;
     a {
       color: $color-white;
+      font-size: 18px;
+      @media screen and (min-width: 768px) {
+        font-size: 15px;
+      }
 
       &.active, &:hover {
         color: $color-black;
@@ -196,8 +206,9 @@ body {
     @media screen and (min-width: 768px) {
       position: absolute;
       right: 0;
-      top: 0;
+      top: -5px;
       margin: 0;
+
     }
 
     .social-fb {
@@ -221,6 +232,9 @@ body {
 .container {
   margin-top: 25px;
   position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
 }
 
 .jumbotron {
@@ -266,31 +280,49 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 8;
 }
 .centered-content {
     display: table;
     width: 100%;
     height: 100%;
+    img {
+      height: 50px;
+    }
 }
 .centered-content--inner {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    padding: 200px 0 0;
+    padding: 180px 0 0;
 
     @media screen and (min-width: 768px) {
       padding: 0;
+
+      img {
+        height: 52px;
+      }
     }
 
     h2 {
-      font-size: 37px;
-      margin: 20px 0 20px;
+      font-size: 30px;
+      margin: 5px 0 5px;
+      @media screen and (min-width: 768px) {
+        font-size: 37px;
+        margin: 20px 0 20px;
+      }
     }
 
     h3 {
-      font-size: 21px;
+      font-size: 16px;
       font-weight: 300;
-      margin: 0 0 25px;
+      margin: 0 0 15px;
+      line-height: 1.4em;
+
+      @media screen and (min-width: 768px) {
+        font-size: 21px;
+        margin: 0 0 25px;
+      }
     }
 
     a {
@@ -301,8 +333,8 @@ body {
 }
 
 .content {
-
-  margin-top: 80px;
+  margin: 80px auto 0;
+  max-width: 800px;
 
   @media screen and (min-width: 768px) {
     margin-top: 0;
@@ -317,7 +349,6 @@ body {
     font-weight: 300;
     font-size: 20px;
     margin-top: 0;
-    margin-bottom: 15px;
   }
 
   h5 {
@@ -326,7 +357,10 @@ body {
     margin: 15px 0 0 0;
 
     .contact-us & {
-      font-size: 15px;
+      font-size: 18px;
+      @media screen and (min-width: 768px) {
+        font-size: 15px;
+      }
       margin: 0 0 10px 0;
     }
   }
@@ -336,7 +370,10 @@ body {
     font-size: 18px;
 
     .contact-us & {
-      font-size: 15px;
+      font-size: 18px;
+      @media screen and (min-width: 768px) {
+        font-size: 15px;
+      }
       margin-bottom: 20px;
     }
   }
@@ -345,22 +382,31 @@ body {
 
     .col-sm-4 {
       margin-bottom: 60px;
+
+
+      img {
+        height: 124px;
+        @media screen and (min-width: 768px) {
+          height: 97px;
+        }
+      }
     }
 
   }
   &.terms {
-    max-width:600px;
-    margin:80px auto;
+    max-width:800px;
     text-align: center;
 
     p {
       margin-bottom: 30px;
       font-size: 15px;
+      @media screen and (min-width: 768px) {
+        font-size: 15px;
+      }
     }
   }
   &.contact {
     max-width:600px;
-    margin: 80px auto 0;
 
     .col-sm-4, .col-sm-12 {
       padding-left: 5px;
@@ -393,8 +439,10 @@ body {
     }
 
     select {
+      border-radius: 0;
       padding: 5px 10px;
       height: 44px;
+      background: $color-white;
     }
 
      textarea {
@@ -415,6 +463,7 @@ body {
       background: $color-brand;
       margin:0 auto;
       display: block;
+      margin-top: 15px;
     }
   }
 }
@@ -477,7 +526,7 @@ body {
   background: url("../images/m-menu-yellow.png") top left no-repeat;
   display: block;
   position: absolute;
-  right: 25px;
+  right: 30px;
   top: 15px;
   background-size: cover;
 
@@ -525,5 +574,12 @@ body {
 
   &.active {
     display: block;
+  }
+}
+
+.rwd-break {
+  display: block;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
