@@ -34,4 +34,23 @@ $(document).ready(function(e){
     $('.logo').toggleClass( 'active' );
   });
 
+  $('#contactform').submit(function(e) {
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+    var url = 'email.php'; // the script where you handle the form input.
+    $.ajax({
+           type: 'POST',
+           url: url,
+           data: $('#contactform').serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               $('.submitform').fadeOut(500, function() {
+                 $('.thankyou').fadeIn(500);
+               });
+
+               console(data); // show response from the php script.
+           }
+         });
+
+});
+
 })

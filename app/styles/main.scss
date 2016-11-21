@@ -213,16 +213,29 @@ body {
 
     .social-fb {
       background: url('../images/social-fb.png') top left no-repeat;
+      background-size: cover;
       width:29px;
       height: 29px;
       display: inline-block;
+      margin-right: 5px;
     }
 
     .social-twitter {
       background: url('../images/social-twitter.png') top left no-repeat;
+      background-size: cover;
       width:29px;
       height: 29px;
       display: inline-block;
+      margin-right: 5px;
+    }
+
+    .social-linkedin {
+      background: url('../images/social-linkedin.png') top left no-repeat;
+      background-size: cover;
+      width:29px;
+      height: 29px;
+      display: inline-block;
+      margin-right: 5px;
     }
   }
 }
@@ -396,6 +409,7 @@ body {
   &.terms {
     max-width:800px;
     text-align: center;
+    padding-bottom: 100px;
 
     p {
       margin-bottom: 30px;
@@ -439,10 +453,11 @@ body {
     }
 
     select {
+      -webkit-border-radius: 0;
       border-radius: 0;
       padding: 5px 10px;
       height: 44px;
-      background: $color-white;
+      background-color: $color-white;
     }
 
      textarea {
@@ -581,5 +596,18 @@ body {
   display: block;
   @media screen and (min-width: 768px) {
     display: none;
+  }
+}
+
+.thankyou {
+  text-align: center;
+  display: none;
+
+  p {
+    font-size: 18px !important;
+  }
+
+  span {
+    color: $color-brand;
   }
 }
