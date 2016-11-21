@@ -47,37 +47,37 @@
         <p>Toku, 10 Ubi Crescent, Lobby B<br class="rwd-break">&nbsp;#02-21, Ubi Techpark<br class="rwd-break">&nbsp;Singapore 408564</p>
       </div>
     </div>
-    <div class="row form">
-      <div class="col-sm-4">
-        <select class="form-control">
-          <option disabled selected>select category</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
+    <form action="email.php">
+      <div class="row form">
+        <div class="col-sm-4">
+          <select name="category" class="form-control">
+            <option disabled selected>select salutation</option>
+            <option value="MR">MR</option>
+            <option value="MRS">MRS</option>
+            <option value="MS">MS</option>
+          </select>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <input type="text" name="name" class="form-control" placeholder="name">
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <input type="text" name="email" class="form-control" placeholder="email address">
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-4">
-        <input type="text" class="form-control" placeholder="name">
+      <div class="row form">
+        <div class="col-sm-12">
+          <input type="text" name="subject" class="form-control" placeholder="subject">
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-4">
-        <input type="text" class="form-control" placeholder="email address">
+      <div class="row form">
+        <div class="col-sm-12">
+          <textarea class="form-control" name="message" rows="3" placeholder="message"></textarea>
+        </div>
       </div>
-    </div>
-    <div class="row form">
-      <div class="col-sm-12">
-        <input type="text" class="form-control" placeholder="subject">
+      <div class="row form">
+        <button class="btn btn-default" type="submit">SEND</button>
       </div>
-    </div>
-    <div class="row form">
-      <div class="col-sm-12">
-        <textarea class="form-control" rows="3" placeholder="message"></textarea>
-      </div>
-    </div>
-    <div class="row form">
-      <button class="btn btn-default" type="submit">SEND</button>
-    </div>
+    </form>
   </div>
 </div>
 <div id="map"></div>
