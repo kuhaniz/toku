@@ -495,6 +495,11 @@ body {
   background: url("../images/home-featured.jpg") top center no-repeat;
   background-size: cover;
 
+  @media screen and (orientation: landscape) {
+    background: url("../images/home-featured-old.jpg") top center no-repeat;
+    background-size: cover;
+  }
+
   @media screen and (min-width: 768px) {
     background: none;
   }
@@ -504,10 +509,12 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    background: url("../images/home-featured-old.jpg") top center no-repeat;
     display: none;
 
     @media screen and (min-width: 768px) {
       display: block;
+      background: none;
     }
 
   .masthead--video {
