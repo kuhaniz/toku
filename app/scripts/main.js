@@ -34,36 +34,38 @@ $(document).ready(function(e){
     $('.logo').toggleClass( 'active' );
   });
 
-  $( '#contactform' ).validate({
-    errorPlacement: function(error, element){
-          var name    = $(element).attr('name');
-          var $obj    = $('#' + name + '_validate');
-          if($obj.length){
-              error.appendTo($obj);
-          }
-          else {
-              error.insertAfter(element);
-          }
-      },
-      submitHandler: function(form) {
-        $('.submitform').addClass('not-allowed');
-        var url = 'email.php'; // the script where you handle the form input.
-        $.ajax({
-               type: 'POST',
-               url: url,
-               data: $('#contactform').serialize(), // serializes the form's elements.
-               success: function(data)
-               {
-                   $('.submitform').fadeOut(500, function() {
-                     $('.thankyou').fadeIn(500);
-                   });
+  if ($('body').hasClass('contact-us')) {
+    $( '#contactform' ).validate({
+      errorPlacement: function(error, element){
+            var name    = $(element).attr('name');
+            var $obj    = $('#' + name + '_validate');
+            if($obj.length){
+                error.appendTo($obj);
+            }
+            else {
+                error.insertAfter(element);
+            }
+        },
+        submitHandler: function(form) {
+          $('.submitform').addClass('not-allowed');
+          var url = 'email.php'; // the script where you handle the form input.
+          $.ajax({
+                 type: 'POST',
+                 url: url,
+                 data: $('#contactform').serialize(), // serializes the form's elements.
+                 success: function(data)
+                 {
+                     $('.submitform').fadeOut(500, function() {
+                       $('.thankyou').fadeIn(500);
+                     });
 
-                   //console(data); // show response from the php script.
-               }
-             });
+                     //console(data); // show response from the php script.
+                 }
+               });
 
-      }
-});
+        }
+  });
+}
 
 
 })
