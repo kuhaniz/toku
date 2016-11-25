@@ -40,7 +40,6 @@ if($_POST['url'] != ""){
   $mail->Password = "Qwerty88!";
 
   $mail->setFrom('apptoku@gmail.com', 'Toku');
-  $mail->addAddress('tanjinwei@gmail.com', 'Jin Wei');
   $mail->addAddress('support@tokuapp.com', 'Toku');       // Add a recipient
 
   $mail->Subject = 'Contact Us Form - '.$subject;
