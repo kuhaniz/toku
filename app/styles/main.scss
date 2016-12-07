@@ -659,6 +659,10 @@ a.accordion {
     font-size: 15px;
     display: block;
 
+    strong {
+      font-weight: 400;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -686,6 +690,15 @@ div.panel {
 
     p {
       font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .yellow {
+      margin-top: 15px;
+      display: inline-block;
+    }
+    strong {
+      font-weight: 400;
     }
 }
 
